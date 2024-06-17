@@ -1,6 +1,6 @@
 # Coding Assignment 13
 name: 'UI Garden Test Suite Complete'
-run-name: ${{ github.actor }} is Building UI Garden":" ${{ github.event_name }}
+run-name: ${{ github.actor }} is Building UI Garden - ${{ github.event.head_commit.message }}
 on: [push, pull_request]
 
 jobs:
