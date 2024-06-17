@@ -5,7 +5,7 @@ on: [push, pull_request]
 
 jobs:
   build-component-library:
-    name: Run ESLint
+    name: Running UI Garden Test Suites
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -17,16 +17,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install Prettier
-        run: |
-          npm install prettier
+
+      - name: Install Dependencies
+        run: npm install
+
       - name: Run Prettier
         run: npx prettier --check "**/*.{js,jsx,ts,tsx,mdx,css}"
         continue-on-error: false
 
-      - name: Install ESLint
-        run: | 
-          npm install eslint@^8.57.0 eslint-plugin-storybook eslint-plugin-react
       - name: Run ESLint
         run: npx eslint . --config eslint.config.mjs
         continue-on-error: false
+
+      - name: Run Test Suite
+        run: npm run test:auto
