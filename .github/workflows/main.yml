@@ -1,0 +1,21 @@
+# Coding Assignment 13
+name: 'UI Garden Test Suite Complete'
+run-name: ${{ github.actor }} is Building UI Garden
+on: [push]
+
+jobs:
+  build-component-library:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install ESLint
+        run: | 
+          npm install eslint@^8.57.0 eslint-plugin-storybook eslint-plugin-react
+      - name: Run ESLint
+        run: npx eslint . --config eslint.config.mjs
+        continue-on-error: false

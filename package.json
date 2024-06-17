@@ -28,7 +28,8 @@
     "prepare": "husky",
     "lint": "eslint .",
     "prettier:check": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx,css}\"",
-    "prettier:format": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,css}\""
+    "prettier:format": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,css}\"",
+    "action:test": "npm run prettier:format && npm run lint && npm run test:auto"
   },
   "eslintConfig": {
     "extends": [
