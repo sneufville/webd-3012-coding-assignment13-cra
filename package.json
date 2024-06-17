@@ -26,7 +26,7 @@
     "storybook": "storybook dev -p 8083",
     "build-storybook": "storybook build",
     "prepare": "husky",
-    "lint": "prettier --check .",
+    "lint": "eslint .",
     "prettier:check": "prettier --check \"**/*.{js,jsx,ts,tsx,mdx,css}\"",
     "prettier:format": "prettier --write \"**/*.{js,jsx,ts,tsx,mdx,css}\""
   },

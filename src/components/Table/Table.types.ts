@@ -7,11 +7,11 @@
 import React from "react";
 import type { DefaultComponentProps } from "../../@types/app";
 
-export type StyledTableCellProps = DefaultComponentProps & {};
-export type StyledTableRowProps = DefaultComponentProps & {};
-export type StyledTableHeaderProps = DefaultComponentProps & {};
-export type StyledTableBodyProps = DefaultComponentProps & {};
-export type StyledTableFooterProps = DefaultComponentProps & {};
+export type StyledTableCellProps = DefaultComponentProps;
+export type StyledTableRowProps = DefaultComponentProps;
+export type StyledTableHeaderProps = DefaultComponentProps;
+export type StyledTableBodyProps = DefaultComponentProps;
+export type StyledTableFooterProps = DefaultComponentProps;
 export type StyledTableProps = DefaultComponentProps & { "data-testid"?: string };
 
 export type TableCellProps = Pick<DefaultComponentProps, "disabled"> & {

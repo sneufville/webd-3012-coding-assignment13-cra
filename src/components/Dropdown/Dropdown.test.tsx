@@ -33,7 +33,6 @@ describe("Dropdown", () => {
         disabled
       />
     );
-    // eslint-disable-next-line testing-library/no-node-access
     expect(screen.getByText(options[0].label).parentNode).toHaveStyle("cursor: not-allowed");
   });
 });

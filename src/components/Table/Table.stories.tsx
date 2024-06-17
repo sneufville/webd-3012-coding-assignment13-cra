@@ -4,6 +4,7 @@
  * project  coding-assignment-12-cra
  */
 
+import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import Table from "./Table";
 import TableCell from "./TableCell";

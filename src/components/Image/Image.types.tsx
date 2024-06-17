@@ -6,5 +6,5 @@
 
 import type { DefaultComponentProps, DefaultImageComponentProps } from "../../@types/app";
 
-export type ImageProps = DefaultImageComponentProps & {};
+export type ImageProps = DefaultImageComponentProps;
 export type StyledImageProps = DefaultComponentProps & { "data-testid"?: string };

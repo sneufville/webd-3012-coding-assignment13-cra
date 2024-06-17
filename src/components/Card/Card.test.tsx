@@ -5,8 +5,6 @@
  */
 
 import React from "react";
-// eslint-disable-next-line
-import { act } from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Card from "./Card";
@@ -35,7 +33,6 @@ describe("Card", () => {
         disabled
       />
     );
-    // eslint-disable-next-line testing-library/no-node-access
     const cardParent = screen.getByText("Disabled Card").parentNode;
     expect(cardParent).toHaveStyle("background-color: #f4f4f4");
     expect(cardParent).toHaveStyle("cursor: not-allowed");
