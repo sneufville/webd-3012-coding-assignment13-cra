@@ -1,7 +1,7 @@
 # Coding Assignment 13
 name: 'UI Garden Test Suite Complete'
 run-name: ${{ github.actor }} is Building UI Garden
-on: [push]
+on: [push, pull_request]
 
 jobs:
   build-component-library:
@@ -13,6 +13,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: Setup Node Env
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Prettier
+        run: |
+          npm install prettier
+      - name: Run Prettier
+        run: npx prettier --check "**/*.{js,jsx,ts,tsx,mdx,css}"
+        continue-on-error: false
+
       - name: Install ESLint
         run: | 
           npm install eslint@^8.57.0 eslint-plugin-storybook eslint-plugin-react
