@@ -3,7 +3,7 @@
  * created  2024-06-12
  * project  coding-assignment-12-cra
  */
-
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import Table from "./Table";
 import TableHeader from "./TableHeader";

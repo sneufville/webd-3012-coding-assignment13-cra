@@ -4,6 +4,9 @@
  * project  coding-assignment-12-cra
  */
 
+import React from "react";
+// eslint-disable-next-line
+import { act } from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import Card from "./Card";

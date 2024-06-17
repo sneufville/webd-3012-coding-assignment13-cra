@@ -27,18 +27,18 @@ const RadioContainer = styled.div<{
 `;
 
 const StyledRadio = styled.input.attrs<StyledRadioProps>((props) => ({
-  backgroundColor: props.disabled ? "#f5f5f5" : props.backgroundColor ?? "#fff",
+  backgroundcolor: props.disabled ? "#f5f5f5" : props.backgroundcolor ?? "#fff",
   disabled: props.disabled,
   role: "radio",
   type: "radio",
 }))`
-  background-color: ${(props) => props.backgroundColor};
+  background-color: ${(props) => props.backgroundcolor};
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
   width: fit-content;
 `;
 
 const Radio: React.FC<RadioProps> = ({
-  backgroundColor,
+  backgroundcolor,
   disabled,
   labelText,
   onChange,
@@ -46,11 +46,11 @@ const Radio: React.FC<RadioProps> = ({
 }) => {
   return (
     <RadioContainer
-      backgroundColor={backgroundColor}
+      backgroundColor={backgroundcolor}
       disabled={disabled}
     >
       <StyledRadio
-        backgroundColor={backgroundColor}
+        backgroundcolor={backgroundcolor}
         disabled={disabled}
         onChange={onChange}
       />

@@ -8,14 +8,14 @@ import React from "react";
 import type { DefaultComponentProps } from "../../@types/app";
 
 export type StyledRadioProps = Pick<DefaultComponentProps, "disabled"> & {
-  backgroundColor?: string;
+  backgroundcolor?: string;
 };
 
 export type RadioProps = Pick<DefaultComponentProps, "disabled"> & {
   /**
    * The background color for the component
    */
-  backgroundColor?: string;
+  backgroundcolor?: string;
   /**
    * Optionally sets the foreground color the radio button's label
    */

@@ -3,7 +3,7 @@
  * created  2024-05-27
  * project  coding-assignment-12-cra
  */
-
+import React from "react";
 import { render, screen } from "@testing-library/react";
 import Button from "./Button";
 

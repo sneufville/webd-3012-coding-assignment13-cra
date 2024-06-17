@@ -2,8 +2,8 @@ FROM node:20-alpine
 LABEL authors="sneufville"
 
 # Set the working directory
-WORKDIR /neufville_simon_ui_garden
-ENV PATH /neufville_simon_ui_garden/node_modules/.bin:$PATH
+WORKDIR /neufville_simon_ui_garden_build_checks
+ENV PATH /neufville_simon_ui_garden_build_checks/node_modules/.bin:$PATH
 
 # Copy package and lock files
 COPY package.json .
@@ -16,7 +16,7 @@ RUN npm install --silent
 COPY . .
 
 # Expose port
-EXPOSE 8083
+EXPOSE 8018
 
 # Start storybook
 CMD ["npm", "run", "storybook"]

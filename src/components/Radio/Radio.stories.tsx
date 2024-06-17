@@ -12,7 +12,7 @@ const meta: Meta<typeof Radio> = {
   title: "UIGarden/Radio",
   tags: ["autodocs"],
   argTypes: {
-    backgroundColor: {
+    backgroundcolor: {
       control: { type: "color" },
     },
   },
@@ -24,7 +24,7 @@ type Story = StoryObj<typeof Radio>;
 
 export const Default: Story = {
   args: {
-    backgroundColor: "#aac1e4",
+    backgroundcolor: "#aac1e4",
     disabled: false,
     labelText: "Default Label",
   },
