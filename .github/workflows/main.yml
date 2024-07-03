@@ -1,11 +1,16 @@
 # Coding Assignment 13
-name: 'UI Garden Test Suite Complete'
-run-name: ${{ github.actor }} is Building UI Garden - ${{ github.event.head_commit.message }}
+
+# Workflow setup
+name: 'UC Component Library Test Suite'
+run-name: ${{ github.actor }} is Building UC Component Library - ${{ github.event.head_commit.message }}
+
+# Set up triggers for when the pipeline should run
 on: [push, pull_request]
 
+# Job definitions
 jobs:
   build-component-library:
-    name: Running UI Garden Test Suites
+    name: Running UC Component Library Test Suite
     runs-on: ubuntu-latest
     permissions:
       contents: read
