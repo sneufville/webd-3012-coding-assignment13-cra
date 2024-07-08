@@ -3,6 +3,7 @@ LABEL authors="sneufville"
 
 # Set the working directory
 WORKDIR /neufville_simon_ui_garden_build_checks
+# set the path
 ENV PATH /neufville_simon_ui_garden_build_checks/node_modules/.bin:$PATH
 
 # Copy package and lock files
